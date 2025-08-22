@@ -1,1 +1,114 @@
-Im Rita Josephine from Lebanon
+https://youtu.be/ztqUhsLrRVs?t=627
+Set up using terminal
+➜  django cd my-project
+➜  my-project pip3 install django
+Requirement already satisfied: django in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (5.0)
+Requirement already satisfied: asgiref>=3.7.0 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from django) (3.7.2)
+Requirement already satisfied: sqlparse>=0.3.1 in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (from django) (0.4.4)
+➜  my-project django-admin --version
+zsh: command not found: django-admin
+➜  my-project sudo chmod +x django-admin.
+Password:
+chmod: django-admin.: No such file or directory
+➜  my-project pip list
+zsh: command not found: pip
+➜  my-project python3 -m venv rita1
+➜  my-project source rita1/bin/activate
+(rita1) ➜  my-project pip list
+Package Version
+------- -------
+pip     24.3.1
+(rita1) ➜  my-project python3 -m venv rita1    
+(rita1) ➜  my-project source rita1/bin/activate
+(rita1) ➜  my-project pip list
+Package Version
+------- -------
+pip     24.3.1
+(rita1) ➜  my-project cd Rita
+(rita1) ➜  rita1 pip list
+Package Version
+------- -------
+pip     24.3.1
+(rita1) ➜  rita1 pip3 install django
+Collecting django
+  Downloading django-5.2.5-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref>=3.8.1 (from django)
+  Using cached asgiref-3.9.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Downloading django-5.2.5-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 52.5 kB/s eta 0:00:00
+Using cached asgiref-3.9.1-py3-none-any.whl (23 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Installing collected packages: sqlparse, asgiref, django
+Successfully installed asgiref-3.9.1 django-5.2.5 sqlparse-0.5.3
+
+[notice] A new release of pip is available: 24.3.1 -> 25.2
+[notice] To update, run: pip install --upgrade pip
+(rita1) ➜  rita1 pip list
+Package  Version
+-------- -------
+asgiref  3.9.1
+Django   5.2.5
+pip      24.3.1
+sqlparse 0.5.3
+(rita1) ➜  rita1 pip freeze > requirements.txt create a file in explorer
+(rita1) ➜  rita1 pip list
+Package  Version
+-------- -------
+asgiref  3.9.1
+Django   5.2.5
+pip      24.3.1
+sqlparse 0.5.3
+(rita1) ➜  rita1 python3 manage.py start project demo
+/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/michelkadi/django/my-project/rita1/manage.py': [Errno 2] No such file or directory
+(rita1) ➜  rita1 django-admin startproject demo
+(rita1) ➜  rita1 
+
+(rita1) ➜  rita1 python3 manage.py start project demo
+/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/michelkadi/django/my-project/rita1/manage.py': [Errno 2] No such file or directory
+(rita1) ➜  rita1 django-admin startproject demo
+(rita1) ➜  rita1 python3 manage.py runserver
+/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/michelkadi/django/my-project/rita1/manage.py': [Errno 2] No such file or directory
+(rita1) ➜  rita1 cd demo
+(rita1) ➜  demo python3 manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+August 22, 2025 - 07:48:36
+Django version 5.2.5, using settings 'demo.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[22/Aug/2025 07:48:43] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[22/Aug/2025 07:48:44] "GET /favicon.ico HTTP/1.1" 404 2206
+
+
+➜  django ./manage.py startapp newapp
+zsh: no such file or directory: ./manage.py
+➜  django python3 manage.py startapp newapp
+/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/michelkadi/django/manage.py': [Errno 2] No such file or directory
+➜  django cd rita
+cd: no such file or directory: rita
+➜  django ./manage.py startapp newapp
+zsh: no such file or directory: ./manage.py
+➜  django cd my-project
+➜  my-project ./manage.py startapp newapp
+zsh: no such file or directory: ./manage.py
+➜  my-project cd rita1
+➜  rita1 ./manage.py startapp newapp
+zsh: no such file or directory: ./manage.py
+➜  rita1 python3 manage.py startapp newapp
+/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/michelkadi/django/my-project/rita1/manage.py': [Errno 2] No such file or directory
+➜  rita1 cd demo
+➜  demo ./manage.py startapp newapp      
+env: python: No such file or directory
+➜  demo python3 manage.py startapp newapp
+➜  demo 
