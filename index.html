@@ -1,135 +1,63 @@
+<!-- https://youtu.be/FueXoIewxg0 git github
+https://youtu.be/b9k_Q4T8wEo html no css or javascript -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Store CRUD</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      background: #f8f9fa;
-    }
-    h1 { text-align: center; }
-    form {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    input, button {
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      cursor: pointer;
-      background: #007bff;
-      color: white;
-      border: none;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      background: white;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: center;
-    }
-    th {
-      background: #007bff;
-      color: white;
-    }
-    .actions button {
-      margin: 0 5px;
-      padding: 5px 10px;
-    }
-    .edit { background: #ffc107; }
-    .delete { background: #dc3545; }
-  </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Store Product Management</h1>
-  
-  <form id="productForm">
-    <input type="text" id="name" placeholder="Product Name" required>
-    <input type="number" id="price" placeholder="Price" required>
-    <input type="number" id="quantity" placeholder="Quantity" required>
-    <button type="submit">Add Product</button>
-  </form>
-  
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Price ($)</th>
-        <th>Quantity</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody id="productList"></tbody>
-  </table>
-  
-  <script>
-    let products = JSON.parse(localStorage.getItem("products")) || [];
-    let editIndex = null;
+        <header>
+                <h1>this is my homepage</h1>
+                <p class="qqq">hi, im john. is an aspiring
+                        web developer for lifelong learner </p>
+                <p>learning</p>
+        </header>
+        <main>
+                <section class="ppp">
+                        <h2>about me</h2>
+                        <p>im student learning front-end developement,
+                                i enjoy coding gaming hiking
+                                , in my free time </p>
 
-    const form = document.getElementById("productForm");
-    const productList = document.getElementById("productList");
+                </section>
+                <section>
+                        <h2>favourite quotes</h2>
+                        <blockquote>
+                                "the only way to do great work is to love what you do" - steve jobs
+                        </blockquote>
+                </section>
+                <section>
+                        <h2>my hobbies</h2>
+                        <ul>
+                                <li>video games</li>
+                                <li>watching tech reviews</li>
+                                <li>exploring new programming languages</li>
+                                <li>cooking</li>
+                        </ul>
+                </section>
+        </main>
+        <footer>
+                <p>contact me at: longbeach florida</p>
+                <p>&copy; 2025 M.kadi </p>
+                <!-- ********* entity html characters not in keyboard ****
+                <p>I will display &euro;</p>
+                &larr;&rarr;
+                &forall;&part;
+                <p>I will display &#8364;</p>
+                <p>I will display &#x20AC;</p> -->
+                <!-- ************************************************** -->
 
-    function renderProducts() {
-      productList.innerHTML = "";
-      products.forEach((p, index) => {
-        productList.innerHTML += `
-          <tr>
-            <td>${index + 1}</td>
-            <td>${p.name}</td>
-            <td>${p.price}</td>
-            <td>${p.quantity}</td>
-            <td class="actions">
-              <button class="edit" onclick="editProduct(${index})">Edit</button>
-              <button class="delete" onclick="deleteProduct(${index})">Delete</button>
-            </td>
-          </tr>
-        `;
-      });
-      localStorage.setItem("products", JSON.stringify(products));
-    }
+                <!-- I will display €
 
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const price = document.getElementById("price").value;
-      const quantity = document.getElementById("quantity").value;
+                I will display €
 
-      if (editIndex === null) {
-        products.push({ name, price, quantity });
-      } else {
-        products[editIndex] = { name, price, quantity };
-        editIndex = null;
-      }
-
-      form.reset();
-      renderProducts();
-    });
-
-    function editProduct(index) {
-      const p = products[index];
-      document.getElementById("name").value = p.name;
-      document.getElementById("price").value = p.price;
-      document.getElementById("quantity").value = p.quantity;
-      editIndex = index;
-    }
-
-    function deleteProduct(index) {
-      products.splice(index, 1);
-      renderProducts();
-    }
-
-    renderProducts();
-  </script>
+                I will display € -->
+        </footer>
 </body>
+
 </html>

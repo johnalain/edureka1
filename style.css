@@ -1,9 +1,22 @@
-body:nth-child(0){
-    color:red;
+/* header:nth-child(1){
+        color: green; 
+        border: 2px dashed purple;
+} */
+header .qqq {
+        color: green;
+        border: 2px dashed purple;
 }
-  ul:nth-child(0){
- color: blue;
+
+header:first-child {
+        color: red;
 }
- ol:nth-child(0){
-    color: blueviolet;
+
+header:nth-child(3) {
+        color: blue;
+}
+section[class="ppp"]{
+        background-color: rgb(170, 27, 154);
+}
+section:first-child{
+        background-color: aqua;
 }

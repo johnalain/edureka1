@@ -1,0 +1,16 @@
+&larr; print --> in webpage(larr = left arrow)
+&copy; print © in webpage
+&rarr;print <-- in webpage (rarr right arrow)
+&forall;print ∀ in webpage
+&part; print ∂ in webpage
+*************************************************
+                <p>I will display &euro;</p>
+                <p>I will display &#8364;</p>
+                <p>I will display &#x20AC;</p>
+                I will display €
+
+                I will display €
+
+                I will display €
+**********************************************
+
